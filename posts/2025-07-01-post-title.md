@@ -3,8 +3,6 @@ title: "My first post"
 date: 2025-07-01
 description: Here's to new beginnings.
 ---
-Stem Cell Hope for Parkinson's
----
 Hey! I’m Krithika. I just finished my Master’s in Human Genetics, love brains, and I’m mildly obsessed with stem cells.
 This blog? Just a place for me to scream into the scientific void with purpose.
 Let’s begin at the beginning:
@@ -33,4 +31,5 @@ Hence: Bench to Brain.
 Because what starts at the bench can (hopefully) change a brain someday.
 So, if you're someone who loves neurons, stem cells, or just wants to watch a hopeful genetics student try to science her way into curing Parkinson’s… stick around.
 This is going to be weird, wonderful, and 100% real.
+
 — Krithika Rajesh 🧠
