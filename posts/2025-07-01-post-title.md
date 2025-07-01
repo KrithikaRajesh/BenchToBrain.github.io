@@ -1,7 +1,7 @@
 ---
-title: "Welcome to Bench to Brain!"
+# Welcome to Bench to Brain!
 date: 2025-07-01
-description: Here's to new beginnings.
+## Here's to new beginnings.
 ---
 Hey! I’m Krithika. I just finished my Master’s in Human Genetics, love brains, and I’m mildly obsessed with stem cells.
 This blog? Just a place for me to scream into the scientific void with purpose.
