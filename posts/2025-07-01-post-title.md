@@ -1,5 +1,5 @@
 ---
-title: "My first post"
+title: "Welcome to Bench to Brain!"
 date: 2025-07-01
 description: Here's to new beginnings.
 ---
