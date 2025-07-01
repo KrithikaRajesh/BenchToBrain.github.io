@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog Post - Bench to Brain</title>
+  <title>Bench to Brain – Post</title>
   <link rel="stylesheet" href="../assets/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script defer src="../assets/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -26,9 +25,39 @@
       </ul>
     </nav>
   </header>
-  <main id="markdown-container" class="post-markdown"></main>
+
+  <main>
+    <p>Loading post...</p>
+  </main>
+
   <footer>
     <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
+
+  <!-- ✅ Load Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- ✅ Load the blog post based on URL -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const post = params.get("post");
+
+    if (post) {
+      fetch(post)
+        .then(res => {
+          if (!res.ok) throw new Error("Post not found.");
+          return res.text();
+        })
+        .then(markdown => {
+          const html = marked.parse(markdown);
+          document.querySelector("main").innerHTML = html;
+        })
+        .catch(err => {
+          document.querySelector("main").innerHTML = `<p style="color:red;">${err.message}</p>`;
+        });
+    } else {
+      document.querySelector("main").innerHTML = "<p>No post specified.</p>";
+    }
+  </script>
 </body>
 </html>
