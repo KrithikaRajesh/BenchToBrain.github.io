@@ -10,9 +10,10 @@ Let’s begin at the beginning:
 ## Why Parkinson’s? Why me?
 
 Spoiler alert: It’s personal.
-
+<Figure>
 <img src="../assets/Grandma.jpg" alt="Grandma" width="300" />
-
+<figcaption>Me ft. my inspiration</figcaption>
+</figure>
 
 I didn’t stumble into neuroscience because I thought brains were cool (they _are_, obviously). I got into this because of a woman with the warmest hugs, sharpest wit, and a hand that started to shake one day — my grandmother.
 
@@ -27,7 +28,10 @@ They’re shapeshifters. They’re problem solvers. And they’re our best shot 
 
 I have worked with adipose-derived mesenchymal stem cells, done differentiation assays, and spent a mildly concerning amount of time thinking about ✨**neuronal regeneration**✨. Basically: I’m training to become a neuro-nerd vigilante, powered by science (and coffee).
 
+<Figure>
 <img src="../assets/K.jpg" alt="Me" width="300" />
+<figcaption>Your friendly neighborhood neuro-nerd vigilante</figcaption>
+</figure>
 
 ## Why this blog exists
 
