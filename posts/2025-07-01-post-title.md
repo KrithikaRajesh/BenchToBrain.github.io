@@ -22,7 +22,7 @@ Fast forward a decade, now I’m a Master’s student in Human Genetics, neck-de
 Stem cells are magic — sort of (except when they decide to die on you).
 They’re shapeshifters. They’re problem solvers. And they’re our best shot at rebuilding what Parkinson’s tears apart.
 I have worked with adipose-derived mesenchymal stem cells, done differentiation assays, and spent a mildly concerning amount of time thinking about ✨neuronal regeneration✨. Basically: I’m training to become a neuro-nerd vigilante, powered by science (and coffee).
-
+[K](assets/K.jpg)
 
 ## Why this blog exists
 
