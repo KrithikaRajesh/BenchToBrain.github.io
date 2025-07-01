@@ -4,13 +4,13 @@ date: 2025-07-01
 description: Here's to new beginnings.
 ---
 
-# Stem Cell Hope for Parkinson's
+#Stem Cell Hope for Parkinson's
 ---
 Hey! I’m Krithika. I just finished my Master’s in Human Genetics, love brains, and I’m mildly obsessed with stem cells.
 This blog? Just a place for me to scream into the scientific void with purpose.
 Let’s begin at the beginning:
 ---
-**Why Parkinson’s? Why me?**
+##Why Parkinson’s? Why me?
 ---
 Spoiler alert: It’s personal.
 I didn’t stumble into neuroscience because I thought brains were cool (they are, obviously). I got into this because of a woman with the warmest hugs, sharpest wit, and a hand that started to shake one day — my grandmother.
