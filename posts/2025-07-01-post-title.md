@@ -11,7 +11,7 @@ Let’s begin at the beginning:
 
 Spoiler alert: It’s personal.
 
-[Grandma](assets/Grandma.jpg)
+[Grandma]([assets/Grandma.jpg](https://github.com/KrithikaRajesh/BenchToBrain.github.io/blob/main/assets/Grandma.jpg))
 
 I didn’t stumble into neuroscience because I thought brains were cool (they are, obviously). I got into this because of a woman with the warmest hugs, sharpest wit, and a hand that started to shake one day — my grandmother.
 Parkinson’s didn’t come in loud. It snuck in slowly, stealing her steadiness and spark in tiny, quiet pieces. It was frustrating. It was heartbreaking. It was also the moment I realised I wanted to fight back. Not with swords (although that would be awesome), but with science.
