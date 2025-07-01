@@ -10,6 +10,9 @@ Let’s begin at the beginning:
 ## Why Parkinson’s? Why me?
 
 Spoiler alert: It’s personal.
+
+[Grandma](assets/Grandma.jpg)
+
 I didn’t stumble into neuroscience because I thought brains were cool (they are, obviously). I got into this because of a woman with the warmest hugs, sharpest wit, and a hand that started to shake one day — my grandmother.
 Parkinson’s didn’t come in loud. It snuck in slowly, stealing her steadiness and spark in tiny, quiet pieces. It was frustrating. It was heartbreaking. It was also the moment I realised I wanted to fight back. Not with swords (although that would be awesome), but with science.
 
@@ -19,6 +22,7 @@ Fast forward a decade, now I’m a Master’s student in Human Genetics, neck-de
 Stem cells are magic — sort of (except when they decide to die on you).
 They’re shapeshifters. They’re problem solvers. And they’re our best shot at rebuilding what Parkinson’s tears apart.
 I have worked with adipose-derived mesenchymal stem cells, done differentiation assays, and spent a mildly concerning amount of time thinking about ✨neuronal regeneration✨. Basically: I’m training to become a neuro-nerd vigilante, powered by science (and coffee).
+
 
 ## Why this blog exists
 
