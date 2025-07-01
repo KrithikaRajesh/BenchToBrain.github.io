@@ -1,0 +1,81 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+  color: #333;
+}
+header {
+  background: #7a625a;
+  color: #fff;
+  padding: 1.5em 1em;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  height: 80px;
+  margin-right: 20px;
+}
+.titles h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+.tagline {
+  font-size: 0.95rem;
+  color: #e0dcdc;
+  font-style: italic;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+  display: none;
+  text-align: center;
+}
+nav li {
+  margin: 0.5em 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+.menu-toggle {
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: right;
+  padding: 0 1em;
+}
+@media(min-width: 600px) {
+  nav ul {
+    display: flex !important;
+    justify-content: center;
+  }
+  nav li {
+    margin: 0 15px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+main {
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+}
+.post-card {
+  background: #fff;
+  padding: 1em;
+  margin: 1em 0;
+  border-left: 5px solid #7a625a;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+footer {
+  background: #7a625a;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
