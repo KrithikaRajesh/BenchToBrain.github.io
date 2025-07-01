@@ -139,3 +139,9 @@ figcaption {
   text-align: center;
 }
 
+#blog-content {
+  font-family: 'Handlee', cursive;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #333;
+}
