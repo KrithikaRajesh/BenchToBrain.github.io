@@ -119,3 +119,23 @@ footer {
     margin-top: 1.5em;
   }
 }
+
+figure {
+  text-align: center;
+  margin: 20px auto;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-family: 'Handlee', cursive;
+  font-size: 0.85em;
+  color: #666;
+  font-style: normal;
+  margin-top: 5px;
+  text-align: center;
+}
+
