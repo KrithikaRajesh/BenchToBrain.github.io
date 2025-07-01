@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bench to Brain – Post</title>
+
+  <!-- Site‑wide styles -->
   <link rel="stylesheet" href="../assets/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,39 +30,36 @@
     </nav>
   </header>
 
+  <!-- Blog content wrapper -->
   <main>
-     <div id="blog-content">Loading post...</div>
+    <div id="blog-content">Loading post…</div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
 
-  <!-- ✅ Load Markdown parser -->
+  <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- ✅ Load the blog post based on URL -->
+  <!-- Render Markdown file -->
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const post = params.get("post");
+    const target   = document.getElementById('blog-content');
+    const filename = new URLSearchParams(location.search).get('post');
 
-    if (post) {
-      fetch(post)
-        .then(res => {
-          if (!res.ok) throw new Error("Post not found.");
-          return res.text();
-        })
-        .then(markdown => {
-          const html = marked.parse(markdown);
-         document.querySelector("#blog-content").innerHTML = html;
-
-        })
-        .catch(err => {
-          document.querySelector("main").innerHTML = `<p style="color:red;">${err.message}</p>`;
-        });
+    if (filename) {
+      fetch(filename)
+        .then(r => (r.ok ? r.text() : Promise.reject('Post not found')))
+        .then(md => target.innerHTML = marked.parse(md))
+        .catch(err => target.innerHTML = `<p style="color:red;">${err}</p>`);
     } else {
-      document.querySelector("main").innerHTML = "<p>No post specified.</p>";
+      target.textContent = 'No post specified.';
     }
   </script>
+
+  <!-- Local one‑liner for Handlee font inside blog area -->
+  <style>
+    #blog-content {font-family:'Handlee',cursive;}
+  </style>
 </body>
 </html>
