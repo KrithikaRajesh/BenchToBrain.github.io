@@ -29,6 +29,7 @@
 
   <main>
     <p>Loading post...</p>
+     <div id="blog-content">Loading post...</div>
   </main>
 
   <footer>
@@ -51,7 +52,8 @@
         })
         .then(markdown => {
           const html = marked.parse(markdown);
-          document.querySelector("main").innerHTML = html;
+         document.querySelector("#blog-content").innerHTML = html;
+
         })
         .catch(err => {
           document.querySelector("main").innerHTML = `<p style="color:red;">${err.message}</p>`;
