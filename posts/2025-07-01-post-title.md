@@ -38,6 +38,7 @@ I needed a space where I could talk about:
 - The why behind the work.
   
 Hence: **Bench to Brain.**
+
 Because what starts at the bench can (hopefully) change a brain someday.
 
 So, if you're someone who loves neurons, stem cells, or just wants to watch a hopeful genetics student try to science her way into curing Parkinson’s… stick around.
