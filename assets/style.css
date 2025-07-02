@@ -145,3 +145,26 @@ figcaption {
   line-height: 1.7;
   color: #333;
 }
+form {
+  background: #f9f7f5;
+  padding: 20px;
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form button {
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #6c4e3d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
