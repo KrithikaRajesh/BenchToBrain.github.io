@@ -210,3 +210,28 @@ form button {
   border: none;
   cursor: pointer;
 }
+/* Mailchimp override styles to match site */
+#mc_embed_signup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+#mc_embed_signup input[type="text"],
+#mc_embed_signup input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#mc_embed_signup .asterisk {
+  color: red;
+}
+
+#mc_embed_signup .clear {
+  text-align: center;
+}
