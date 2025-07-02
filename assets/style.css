@@ -193,3 +193,16 @@ form button {
     width: 90%;
   }
 }
+.smart-img {
+  width: 45%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 🔧 On screens 600px or smaller, bump to 90% */
+@media (max-width: 600px) {
+  .smart-img {
+    width: 90%;
+  }
+}
