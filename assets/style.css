@@ -179,3 +179,17 @@ form button {
   display: flex;
 }
 <link rel="stylesheet" href="../assets/style.css" />
+.responsive-img {
+  width: 45%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* On smaller screens, make it bigger */
+@media (max-width: 600px) {
+  .responsive-img {
+    width: 90%;
+  }
+}
