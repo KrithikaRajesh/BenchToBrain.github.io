@@ -1,89 +1,123 @@
-
+/* --------------------
+   Global styles
+--------------------*/
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   background: #f4f4f4;
   color: #333;
 }
+
+/* --------------------
+   Header & Navigation
+--------------------*/
 header {
   background: #7a625a;
   color: #fff;
   padding: 1.5em 1em;
 }
+
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .logo {
   height: 80px;
   margin-right: 20px;
 }
+
 .titles h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   margin: 0;
 }
+
 .tagline {
   font-size: 0.95rem;
   color: #e0dcdc;
   font-style: italic;
 }
-nav ul {
+
+/* Base nav (hidden on mobile) */
+nav ul.menu {
   list-style: none;
   padding: 0;
-  margin: 1em 0 0 0;
+  margin: 1em 0 0;
   display: none;
   text-align: center;
+  flex-direction: column;
+  background: #7a625a;
 }
-nav li {
+
+nav ul.menu li {
   margin: 0.5em 0;
 }
-nav a {
+
+nav ul.menu a {
   color: #fff;
   text-decoration: none;
   font-size: 1.1em;
 }
+
 .menu-toggle {
   font-size: 1.5em;
   cursor: pointer;
   text-align: right;
   padding: 0 1em;
 }
-@media(min-width: 600px) {
-  nav ul {
+
+/* Desktop nav */
+@media (min-width: 600px) {
+  nav ul.menu {
     display: flex !important;
     justify-content: center;
   }
-  nav li {
+  nav ul.menu li {
     margin: 0 15px;
   }
   .menu-toggle {
     display: none;
   }
 }
+
+/* Show menu when active (mobile) */
+nav ul.menu.active {
+  display: flex;
+}
+
+/* --------------------
+   Main Content Blocks
+--------------------*/
 main {
   padding: 2em;
   max-width: 900px;
   margin: auto;
 }
+
 .post-card {
   background: #fff;
   padding: 1em;
   margin: 1em 0;
   border-left: 5px solid #7a625a;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+
+/* --------------------
+   Footer
+--------------------*/
 footer {
   background: #7a625a;
   color: #fff;
   text-align: center;
   padding: 1em;
 }
+
+/* --------------------
+   About page split layout
+--------------------*/
 .about-container {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 2em;
   padding: 2em;
 }
@@ -101,25 +135,24 @@ footer {
 
 .about-image img {
   max-width: 100%;
-  height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Stack on small screens */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
-
   .about-image {
     text-align: center;
     margin-top: 1.5em;
   }
 }
 
+/* --------------------
+   Figure & Captions
+--------------------*/
 figure {
   text-align: center;
   margin: 20px auto;
@@ -131,20 +164,41 @@ figure img {
 }
 
 figcaption {
-  font-family: 'Handlee', cursive;
+  font-family: "Handlee", cursive;
   font-size: 0.85em;
   color: #666;
-  font-style: italic;
   margin-top: 5px;
   text-align: center;
 }
 
+/* --------------------
+   Blog post font override
+--------------------*/
 #blog-content {
-  font-family: 'Handlee', cursive;
+  font-family: "Handlee", cursive;
   font-size: 1.05em;
   line-height: 1.7;
-  color: #333;
 }
+
+/* --------------------
+   Responsive images (smart-img)
+--------------------*/
+.smart-img {
+  width: 45%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .smart-img {
+    width: 90%;
+  }
+}
+
+/* --------------------
+   Subscribe form
+--------------------*/
 form {
   background: #f9f7f5;
   padding: 20px;
@@ -154,7 +208,8 @@ form {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-form input, form button {
+form input,
+form button {
   padding: 10px;
   width: 100%;
   border-radius: 6px;
@@ -167,42 +222,4 @@ form button {
   color: white;
   border: none;
   cursor: pointer;
-}
-.menu {
-  display: none;
-  flex-direction: column;
-  background-color: #7a625a;
-  padding: 1em 0;
-}
-
-.menu.active {
-  display: flex;
-}
-<link rel="stylesheet" href="../assets/style.css" />
-.responsive-img {
-  width: 45%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* On smaller screens, make it bigger */
-@media (max-width: 600px) {
-  .responsive-img {
-    width: 90%;
-  }
-}
-.smart-img {
-  width: 45%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* 🔧 On screens 600px or smaller, bump to 90% */
-@media (max-width: 600px) {
-  .smart-img {
-    width: 90%;
-  }
 }
