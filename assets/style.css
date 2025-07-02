@@ -165,7 +165,7 @@ figcaption {
 
 /* Blog post font */
 #blog-content {
-  font-family: "Playfair";
+  font-family: "Playfair Display", serif;
   font-size: 1.05em;
   line-height: 1.7;
   color: #333;
