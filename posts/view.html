@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bench to Brain – Post</title>
 
-  <!-- Site‑wide styles -->
+  <!-- Site‑wide styles & fonts -->
   <link rel="stylesheet" href="../assets/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
-  <script defer src="../assets/script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <script src="https://cdn.counter.dev/script.js" 
-        data-id="dc88eafd-88ac-4e89-b4b3-781afe3bd352" 
-        data-utcoffset="6"></script>
+  <!-- Markdown parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+
+  <!-- Counter.dev tracking (only 1×) -->
+  <script src="https://cdn.counter.dev/script.js"
+          data-id="dc88eafd-88ac-4e89-b4b3-781afe3bd352"
+          data-utcoffset="6" defer></script>
+
+  <!-- Your site JS (loads markdown & toggles menu) -->
+  <script src="../assets/script.js" defer></script>
 </head>
 <body>
   <header>
@@ -25,56 +29,30 @@
         <p class="tagline">Exploring regeneration, one neuron at a time</p>
       </div>
     </div>
-  <nav>
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-  <ul class="menu" id="menu">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../about.html">About</a></li>
-    <li><a href="../contact.html">Contact</a></li>
-    <li><a href="../subscribe.html">Subscribe</a></li>
-  </ul>
-</nav>
+
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="menu" id="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../subscribe.html">Subscribe</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Blog content wrapper -->
   <main>
-    <div id="blog-content">Loading post...</div>
-<div class="view-counter" style="text-align: right; font-size: 0.9em; color: #666;">
-  👁️ <span id="counter-value">Loading views...</span>
-</div>
+    <!-- 👁️ View counter line -->
+    <p style="text-align:right;font-size:0.9em;color:#777;">
+      👁️ <span id="counter-value">Loading views...</span>
+    </p>
+
+    <!-- Blog post content loads here -->
     <div id="markdown-container"></div>
-<p id="view-count" style="text-align: right; font-size: 0.9em; color: #777;"></p>
-
-
   </main>
 
   <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
-
-  <!-- Markdown parser -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <!-- Render Markdown file -->
-  <script>
-    const target   = document.getElementById('blog-content');
-    const filename = new URLSearchParams(location.search).get('post');
-
-    if (filename) {
-      fetch(filename)
-        .then(r => (r.ok ? r.text() : Promise.reject('Post not found')))
-        .then(md => target.innerHTML = marked.parse(md))
-        .catch(err => target.innerHTML = `<p style="color:red;">${err}</p>`);
-    } else {
-      target.textContent = 'No post specified.';
-    }
-  </script>
-
-  <!-- Local one‑liner for Handlee font inside blog area -->
-  <style>
-    #blog-content {font-family:'Handlee',cursive;}
-  </style>
-  <script src="https://cdn.counter.dev/script.js" data-id="dc88eafd-88ac-4e89-b4b3-781afe3bd352" data-utcoffset="5.5"></script>
-
 </body>
 </html>
