@@ -49,6 +49,27 @@
     <div class="view-counter" style="text-align: right; font-size: 0.9em; color: #666;">
       <span id="counter-value">Loading views...</span>
     </div>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
+  authDomain: "bench-to-brain.firebaseapp.com",
+  projectId: "bench-to-brain",
+  storageBucket: "bench-to-brain.firebasestorage.app",
+  messagingSenderId: "637947380353",
+  appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
+  measurementId: "G-16TDLGD1ZG"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
   </main>
 
   <footer>
