@@ -62,46 +62,63 @@
   </footer>
 
   <!-- Firebase Like Button Logic -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getFirestore, doc, getDoc, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+ <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
-      authDomain: "bench-to-brain.firebaseapp.com",
-      projectId: "bench-to-brain",
-      storageBucket: "bench-to-brain.firebasestorage.app",
-      messagingSenderId: "637947380353",
-      appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
-      measurementId: "G-16TDLGD1ZG"
-    };
+  /* ----------  Firebase config  ---------- */
+  const firebaseConfig = {
+    apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
+    authDomain: "bench-to-brain.firebaseapp.com",
+    projectId: "bench-to-brain",
+    storageBucket: "bench-to-brain.firebasestorage.app",
+    messagingSenderId: "637947380353",
+    appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
+    measurementId: "G-16TDLGD1ZG"
+  };
+  const app = initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+  /* ----------  Like‑button logic  ---------- */
+  window.addEventListener("DOMContentLoaded", async () => {
+    const btn        = document.getElementById("like-btn");
+    const countSpan  = document.getElementById("like-count");
+    const filename   = new URLSearchParams(location.search).get("post");
+    if (!btn || !filename) return;
 
-    window.addEventListener("DOMContentLoaded", async () => {
-      const likeBtn = document.getElementById("like-btn");
-      const likeCountSpan = document.getElementById("like-count");
-      const filename = new URLSearchParams(location.search).get("post");
-      if (!filename) return;
+    const storageKey = `b2b-like-${filename}`;        // remembers this user’s like
+    const docRef     = doc(db, "likes", filename);
 
-      const docRef = doc(db, "likes", filename);
-      const docSnap = await getDoc(docRef);
+    // 1️⃣  Initialise Firestore doc & show current count
+    const snap = await getDoc(docRef);
+    if (snap.exists()) {
+      countSpan.textContent = snap.data().count ?? 0;
+    } else {
+      await setDoc(docRef, { count: 0 });
+      countSpan.textContent = 0;
+    }
 
-      if (docSnap.exists()) {
-        likeCountSpan.textContent = docSnap.data().count ?? 0;
-      } else {
-        await setDoc(docRef, { count: 0 });
-        likeCountSpan.textContent = 0;
-      }
+    // 2️⃣  Reflect previous like state (if any)
+    let liked = localStorage.getItem(storageKey) === "yes";
+    updateButtonUI();
 
-      likeBtn.addEventListener("click", async () => {
-        const current = parseInt(likeCountSpan.textContent);
-        const newCount = current + 1;
-        await updateDoc(docRef, { count: newCount });
-        likeCountSpan.textContent = newCount;
-      });
+    // 3️⃣  Toggle handler
+    btn.addEventListener("click", async () => {
+      liked = !liked;                          // flip state
+      localStorage.setItem(storageKey, liked ? "yes" : "no");
+      await updateDoc(docRef, { count: increment(liked ? 1 : -1) });
+
+      // update UI count instantly
+      const current = parseInt(countSpan.textContent) + (liked ? 1 : -1);
+      countSpan.textContent = current;
+      updateButtonUI();
     });
-  </script>
+
+    /* helper to update button style/label */
+    function updateButtonUI() {
+      btn.textContent = liked ? "💔 Unlike" : "❤️ Like";
+    }
+  });
+</script>
 </body>
 </html>
