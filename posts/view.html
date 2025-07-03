@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bench to Brain – Post</title>
 
-  <!-- Site Styles -->
+  <!-- Styles -->
   <link rel="stylesheet" href="../assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
 
   <!-- Markdown Parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- ✅ GoatCounter tracking -->
+  <!-- GoatCounter Tracking -->
   <script data-goatcounter="https://benchtobrain.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
 
@@ -42,45 +42,66 @@
   </header>
 
   <main>
-    <!-- Markdown content will be injected here -->
+    <!-- Markdown will be rendered here -->
     <div id="markdown-container">Loading post...</div>
 
-    <!-- 👁️ View counter (optional display using GoatCounter API) -->
-    <div class="view-counter" style="text-align: right; font-size: 0.9em; color: #666;">
-      <span id="counter-value">Loading views...</span>
+    <!-- Optional view counter (displayed only visually, not auto-filled by GoatCounter) -->
+    <div style="text-align: right; font-size: 0.9em; color: #666; margin-top: 1em;">
+      Views are being tracked (but not shown here automatically).
     </div>
+
     <!-- Like Button -->
-<div style="margin-top: 2em;">
-  <button id="like-button">❤️ Like</button>
-  <span id="like-count">Loading...</span>
-</div>
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
-    authDomain: "bench-to-brain.firebaseapp.com",
-    projectId: "bench-to-brain",
-    storageBucket: "bench-to-brain.firebasestorage.app",
-    messagingSenderId: "637947380353",
-    appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
-    measurementId: "G-16TDLGD1ZG"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
+    <div class="like-section" style="text-align: center; margin-top: 2em;">
+      <button id="like-btn" style="padding: 0.5em 1em;">❤️ Like</button>
+      <p><span id="like-count">0</span> Likes</p>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
+
+  <!-- Firebase Like Button Logic -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, doc, getDoc, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
+      authDomain: "bench-to-brain.firebaseapp.com",
+      projectId: "bench-to-brain",
+      storageBucket: "bench-to-brain.firebasestorage.app",
+      messagingSenderId: "637947380353",
+      appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
+      measurementId: "G-16TDLGD1ZG"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.addEventListener("DOMContentLoaded", async () => {
+      const likeBtn = document.getElementById("like-btn");
+      const likeCountSpan = document.getElementById("like-count");
+      const filename = new URLSearchParams(location.search).get("post");
+      if (!filename) return;
+
+      const docRef = doc(db, "likes", filename);
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        likeCountSpan.textContent = docSnap.data().count ?? 0;
+      } else {
+        await setDoc(docRef, { count: 0 });
+        likeCountSpan.textContent = 0;
+      }
+
+      likeBtn.addEventListener("click", async () => {
+        const current = parseInt(likeCountSpan.textContent);
+        const newCount = current + 1;
+        await updateDoc(docRef, { count: newCount });
+        likeCountSpan.textContent = newCount;
+      });
+    });
+  </script>
 </body>
 </html>
