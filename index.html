@@ -6,7 +6,6 @@
   <title>Bench to Brain</title>
   <link rel="stylesheet" href="assets/style.css" />
   <script defer src="assets/script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -31,28 +30,47 @@
 
   <main>
     <h2>Recent Posts</h2>
-
-    <div class="posts">
-      <!-- Post 1 -->
-      <div class="post-card">
-        <a href="posts/view.html?post=2025-07-01-post-title.md" class="blog-post-card">
-          <h3>Welcome to Bench to Brain</h3>
-          <p>A brief introduction to the blog, its purpose, and the journey ahead.</p>
-        </a>
-      </div>
-
-      <!-- Post 2 -->
-      <div class="post-card">
-        <a href="posts/view.html?post=2025-07-02-signs.md" class="blog-post-card">
-          <h3>The Earliest Signs of Parkinson’s (That No One Talks About)</h3>
-          <p>Parkinson's whispers before it shouts.</p>
-        </a>
-      </div>
+    <div class="posts" id="posts-container">
+      <!-- Posts will be injected here -->
     </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
+
+  <script>
+    const posts = [
+      {
+        title: "Welcome to Bench to Brain",
+        date: "2025-07-01",
+        file: "2025-07-01-post-title.md",
+        description: "A brief introduction to the blog, its purpose, and the journey ahead."
+      },
+      {
+        title: "The Earliest Signs of Parkinson’s (That No One Talks About)",
+        date: "2025-07-02",
+        file: "2025-07-02-signs.md",
+        description: "Parkinson's whispers before it shouts."
+      }
+    ];
+
+    const container = document.getElementById("posts-container");
+
+    // Sort by date descending
+    posts.sort((a, b) => b.date.localeCompare(a.date));
+
+    posts.forEach(post => {
+      const postHTML = `
+        <div class="post-card">
+          <a href="posts/view.html?post=${post.file}" class="blog-post-card">
+            <h3>${post.title}</h3>
+            <p>${post.description}</p>
+          </a>
+        </div>
+      `;
+      container.innerHTML += postHTML;
+    });
+  </script>
 </body>
 </html>
