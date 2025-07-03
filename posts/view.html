@@ -9,14 +9,10 @@
   <link rel="stylesheet" href="../assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
 
-  <!-- Markdown Parser -->
+  <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- GoatCounter Tracking -->
-  <script data-goatcounter="https://benchtobrain.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
-
-  <!-- Custom Script -->
+  <!-- Main site JS -->
   <script defer src="../assets/script.js"></script>
 </head>
 
@@ -42,83 +38,67 @@
   </header>
 
   <main>
-    <!-- Markdown will be rendered here -->
+    <!-- Markdown content will be injected here -->
     <div id="markdown-container">Loading post...</div>
 
-    <!-- Optional view counter (displayed only visually, not auto-filled by GoatCounter) -->
-    <div style="text-align: right; font-size: 0.9em; color: #666; margin-top: 1em;">
-      Views are being tracked (but not shown here automatically).
-    </div>
-
-    <!-- Like Button -->
-    <div class="like-section" style="text-align: center; margin-top: 2em;">
-      <button id="like-btn" style="padding: 0.5em 1em;">❤️ Like</button>
-      <p><span id="like-count">0</span> Likes</p>
+    <!-- ❤️ Like button -->
+    <div class="like-section" style="text-align:center; margin-top:2em;">
+      <button id="like-btn" style="padding:0.5em 1em;">❤️ Like</button>
+      <p><span id="like-count">0</span> Likes</p>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
 
-  <!-- Firebase Like Button Logic -->
- <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  <!-- Firebase Like‑button logic -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-  /* ----------  Firebase config  ---------- */
-  const firebaseConfig = {
-    apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
-    authDomain: "bench-to-brain.firebaseapp.com",
-    projectId: "bench-to-brain",
-    storageBucket: "bench-to-brain.firebasestorage.app",
-    messagingSenderId: "637947380353",
-    appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
-    measurementId: "G-16TDLGD1ZG"
-  };
-  const app = initializeApp(firebaseConfig);
-  const db  = getFirestore(app);
+    /* 🔗  Firebase config  */
+    const firebaseConfig = {
+      apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
+      authDomain: "bench-to-brain.firebaseapp.com",
+      projectId: "bench-to-brain",
+      storageBucket: "bench-to-brain.firebasestorage.app",
+      messagingSenderId: "637947380353",
+      appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
+      measurementId: "G-16TDLGD1ZG"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db  = getFirestore(app);
 
-  /* ----------  Like‑button logic  ---------- */
-  window.addEventListener("DOMContentLoaded", async () => {
-    const btn        = document.getElementById("like-btn");
-    const countSpan  = document.getElementById("like-count");
-    const filename   = new URLSearchParams(location.search).get("post");
-    if (!btn || !filename) return;
+    /* ❤️ Like‑toggle logic */
+    window.addEventListener("DOMContentLoaded", async () => {
+      const btn   = document.getElementById("like-btn");
+      const span  = document.getElementById("like-count");
+      const file  = new URLSearchParams(location.search).get("post");
+      if (!btn || !file) return;
 
-    const storageKey = `b2b-like-${filename}`;        // remembers this user’s like
-    const docRef     = doc(db, "likes", filename);
+      const key        = `b2b-like-${file}`;
+      const docRef     = doc(db, "likes", file);
+      const snap       = await getDoc(docRef);
 
-    // 1️⃣  Initialise Firestore doc & show current count
-    const snap = await getDoc(docRef);
-    if (snap.exists()) {
-      countSpan.textContent = snap.data().count ?? 0;
-    } else {
-      await setDoc(docRef, { count: 0 });
-      countSpan.textContent = 0;
-    }
+      if (snap.exists()) span.textContent = snap.data().count ?? 0;
+      else { await setDoc(docRef, { count: 0 }); span.textContent = 0; }
 
-    // 2️⃣  Reflect previous like state (if any)
-    let liked = localStorage.getItem(storageKey) === "yes";
-    updateButtonUI();
+      let liked = localStorage.getItem(key) === "yes";
+      updateLabel();
 
-    // 3️⃣  Toggle handler
-    btn.addEventListener("click", async () => {
-      liked = !liked;                          // flip state
-      localStorage.setItem(storageKey, liked ? "yes" : "no");
-      await updateDoc(docRef, { count: increment(liked ? 1 : -1) });
+      btn.addEventListener("click", async () => {
+        liked = !liked;
+        localStorage.setItem(key, liked ? "yes" : "no");
+        await updateDoc(docRef, { count: increment(liked ? 1 : -1) });
+        span.textContent = parseInt(span.textContent) + (liked ? 1 : -1);
+        updateLabel();
+      });
 
-      // update UI count instantly
-      const current = parseInt(countSpan.textContent) + (liked ? 1 : -1);
-      countSpan.textContent = current;
-      updateButtonUI();
+      function updateLabel() {
+        btn.textContent = liked ? "💔 Unlike" : "❤️ Like";
+      }
     });
-
-    /* helper to update button style/label */
-    function updateButtonUI() {
-      btn.textContent = liked ? "💔 Unlike" : "❤️ Like";
-    }
-  });
-</script>
+  </script>
 </body>
 </html>
