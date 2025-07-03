@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const viewSpan  = document.getElementById("counter-value");
   if (viewSpan) {
     const counterId = "dc88eafd-88ac-4e89-b4b3-781afe3bd352"; // <- your ID
-    const pageKey   = encodeURIComponent(location.pathname + location.search);
+   const pageKey = encodeURIComponent(filename);
 
     try {
       const res   = await fetch(`https://counter.dev/count/${counterId}/${pageKey}`);
