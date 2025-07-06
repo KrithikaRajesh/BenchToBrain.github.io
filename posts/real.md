@@ -18,6 +18,11 @@ No instinct for when cells were “happy” or “stressed.”
 Everything felt awkward and unfamiliar — like I was trying to babysit a pet I didn’t understand.
 Especially since everyone else seemed to know more than I did.
 
+<Figure style="text-align: center;">
+<img src="../assets/1.png" alt="Me" width="300" />
+<figcaption> Me, my cells and absolutely no clue what I'm doing</figcaption>
+</figure>
+
 But slowly, I began to get it.
 I learned how to handle flasks confidently, how to tell if my media looked off, and how to trust what I was seeing under the microscope.
 Each passage taught me something new — not just about the cells but about myself.
@@ -27,7 +32,12 @@ At first, every task felt like a test.
 But over time, I began to anticipate what came next — how to plan media changes, manage time in the culture room, organize experiments, and troubleshoot on the fly.
 
 The rigid SOPs turned into flexible workflows.
-The girl who didn’t like staying a minute overtime was staying back hours — not because she had to, but because she wanted to.
+The girl who didn’t like staying a minute overtime was staying back hours — not because she had to, but because she *wanted* to.
+
+ <Figure style="text-align: center;">
+<img src="../assets/2.jpg" alt="Me" width="300" />
+<figcaption> 7:20pm. Everyone left. I stayed. Voluntarily. Who am I? </figcaption>
+</figure>
 
 And I realized that research isn’t about memorizing steps — it’s about adapting when the steps don’t go as planned.
 
