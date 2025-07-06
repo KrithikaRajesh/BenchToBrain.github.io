@@ -5,9 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bench to Brain</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script defer src="assets/script.js"></script>
 </head>
 <body>
   <header>
@@ -43,10 +47,10 @@
   <script>
     const posts = [
       {
-        title: "Welcome to Bench to Brain",
-        date: "2025-07-01",
-        file: "2025-07-01-post-title.md",
-        description: "A brief introduction to the blog, its purpose, and the journey ahead."
+        title: "Things I Didn’t Expect to Learn From My Master’s Project",
+        date: "2025-07-06",
+        file: "2025-07-06-fin.md",
+        description: "From Clueless Cultures to Confidence (Kind Of)"
       },
       {
         title: "The Earliest Signs of Parkinson’s (That No One Talks About)",
@@ -55,16 +59,16 @@
         description: "Parkinson's whispers before it shouts."
       },
       {
-         title: "Things I Didn’t Expect to Learn From My Master’s Project",
-        date: "2025-07-06",
-        file: "posts/2025-07-06-fin.md",
-        description: "From Clueless Cultures to Confidence (Kind Of)"
+        title: "Welcome to Bench to Brain",
+        date: "2025-07-01",
+        file: "2025-07-01-post-title.md",
+        description: "A brief introduction to the blog, its purpose, and the journey ahead."
       }
     ];
 
     const container = document.getElementById("posts-container");
 
-    // Sort by date descending
+    // Sort by date (newest first)
     posts.sort((a, b) => b.date.localeCompare(a.date));
 
     posts.forEach(post => {
