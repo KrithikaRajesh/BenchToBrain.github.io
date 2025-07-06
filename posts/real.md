@@ -47,7 +47,7 @@ And frustration.
 And that one week where everything seemed to go wrong back-to-back.
 
  <Figure style="text-align: center;">
-<img src="../assets/3.png" alt="Me" width="300" />
+<img src="../assets/3.png" alt="Me" width="400" />
 <figcaption>The place that saw the panic, pep talks and all the existential crisis. Oh and meet Señor Pipette - my emotional support instrument</figcaption>
 </figure>
 
