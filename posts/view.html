@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bench to Brain – Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bench to Brain – Post</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="../assets/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet" />
 
   <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- Main JS -->
+  <!-- Site‑wide JS (loads the markdown + hamburger) -->
   <script defer src="../assets/script.js"></script>
 </head>
 
@@ -38,65 +38,12 @@
   </header>
 
   <main>
+    <!-- Markdown post will be injected here by script.js -->
     <div id="markdown-container">Loading post...</div>
-
-    <!-- ❤️ Like Button -->
-    <div class="like-section" style="text-align:center; margin-top:2em;">
-      <button id="like-btn" style="padding:0.5em 1em;">❤️ Like</button>
-      <p><span id="like-count">0</span> Likes</p>
-    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
-
-  <!-- Firebase like logic -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
-      authDomain: "bench-to-brain.firebaseapp.com",
-      projectId: "bench-to-brain",
-      storageBucket: "bench-to-brain.firebasestorage.app",
-      messagingSenderId: "637947380353",
-      appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
-      measurementId: "G-16TDLGD1ZG"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db  = getFirestore(app);
-
-    window.addEventListener("DOMContentLoaded", async () => {
-      const btn  = document.getElementById("like-btn");
-      const span = document.getElementById("like-count");
-      const file = new URLSearchParams(location.search).get("post");
-      if (!btn || !file) return;
-
-      const key = `b2b-like-${file}`;
-      const docRef = doc(db, "likes", file);
-      const snap = await getDoc(docRef);
-
-      if (snap.exists()) span.textContent = snap.data().count ?? 0;
-      else { await setDoc(docRef, { count: 0 }); span.textContent = 0; }
-
-      let liked = localStorage.getItem(key) === "yes";
-      updateLabel();
-
-      btn.addEventListener("click", async () => {
-        liked = !liked;
-        localStorage.setItem(key, liked ? "yes" : "no");
-        await updateDoc(docRef, { count: increment(liked ? 1 : -1) });
-        span.textContent = parseInt(span.textContent) + (liked ? 1 : -1);
-        updateLabel();
-      });
-
-      function updateLabel() {
-        btn.textContent = liked ? "💔 Unlike" : "❤️ Like";
-      }
-    });
-  </script>
 </body>
 </html>
