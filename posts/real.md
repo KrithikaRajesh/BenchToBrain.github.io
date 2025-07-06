@@ -1,101 +1,69 @@
  
-# The Earliest Signs of Parkinson’s (That No One Talks About)
-Date: 2025-07-02
-## Parkinson’s Whispers Before It Shouts
+# Things I Didn’t Expect to Learn From My Master’s Project
+Date: 2025-07-06
+## *From Clueless Cultures to Confidence (Kind Of)*
 ---
 
-When you think of Parkinson’s disease, the first thing that probably comes to mind is a tremor — that characteristic shaking of the hands.
+When I started my master’s research, I thought the learning would be mostly technical — understanding protocols, running assays, generating data, maybe interpreting some graphs.
+What I didn’t expect was how much I’d change in the process.
 
-But what if I told you that some of the first signs of Parkinson’s show up **years before a single hand shakes**?
+While I was trying to figure out how resveratrol affects cellular senescence in adipose-derived mesenchymal stem cells (AdMSCs), I was also learning a hundred other things — most of which weren’t written in any lab manual.
 
-Welcome to the world of **prodromal Parkinson’s** — the stage where symptoms are subtle, confusing, and often completely overlooked, even by doctors.
+## I Had No Experience with Cell Culture — And It Showed
+I stepped into the lab on day one with zero hands-on experience in culturing cells.
+No clue how to hold a flask.
+No muscle memory for pipetting under a hood.
+No instinct for when cells were “happy” or “stressed.”
 
----
+Everything felt awkward and unfamiliar — like I was trying to babysit a pet I didn’t understand.
+Especially since everyone else seemed to know more than I did.
 
-## Early Clues You Might Miss
+But slowly, I began to get it.
+I learned how to handle flasks confidently, how to tell if my media looked off, and how to trust what I was seeing under the microscope.
+Each passage taught me something new — not just about the cells but about myself.
 
-Parkinson’s doesn’t come out of nowhere. It builds quietly. Here are some of the most well-documented non-motor symptoms that can appear long before the classic motor ones:
+## It Wasn’t Just Science — It Was Adaptation
+At first, every task felt like a test.
+But over time, I began to anticipate what came next — how to plan media changes, manage time in the culture room, organize experiments, and troubleshoot on the fly.
 
-### Loss of Smell (*Anosmia*)
+The rigid SOPs turned into flexible workflows.
+The girl who didn’t like staying a minute overtime was staying back hours — not because she had to, but because she wanted to.
 
-* Often the earliest sign
-* [Up to **90%** of people with Parkinson’s report a significantly reduced sense of smell](https://www.sciencedirect.com/science/article/abs/pii/S1353802008003490)
-* It can show up **10–20 years** before diagnosis
+And I realized that research isn’t about memorizing steps — it’s about adapting when the steps don’t go as planned.
 
-### Chronic Constipation
+## The Emotional Learning Curve
+There were moments of panic.
+And frustration.
+And that one week where everything seemed to go wrong back-to-back.
 
-* Not just a digestive issue — it reflects **autonomic nervous system dysfunction**
-* Seen in over **60%** of PD patients, often **decades** before motor symptoms
+But somewhere between the failures and mini-victories, I became more resilient.
+I learned how to be patient when things took longer than expected.
+How to stay calm when something didn’t work.
+How to be okay with not knowing everything right away.
 
-### REM Sleep Behaviour Disorder (*RBD*)
+And that mindset shift?
+Probably the biggest win of all.
 
-* People act out dreams by **kicking**, **yelling**, or **punching** in their sleep
-* A strong predictor of neurodegenerative diseases like Parkinson’s or Lewy body dementia
-* [Up to **80%** of people with RBD go on to develop a neurodegenerative condition](https://pubmed.ncbi.nlm.nih.gov/32599063/)
+## Looking Back Now
+This project didn’t just teach me about senescence markers or antioxidant effects.
+It taught me:
 
-### Mood Changes (*Depression & Anxiety*)
+How to work with living systems that don’t always behave as expected.
 
-* Not just reactions to having Parkinson’s — these can be caused by **dopamine imbalance** in the brain
-* Depression can appear **years before** any physical symptoms
+How to think critically when things don’t go as planned.
 
-### Micrographia & Speech Changes
+How to stay grounded, even when my experiments weren’t.
 
-* Handwriting gets **small and cramped**
-* Speech may become **soft**, **monotone**, or **slower**
-* Easy to overlook — but neurologically significant
-  
-<Figure style="text-align: center;">
-<img src="../assets/symptoms-of-pd.png" alt="Me" width="300" />
-<figcaption> Parksinson's can start quietly.</figcaption>
-</figure>
+It made me curious.
+Confident.
+And most of all, it made me excited to keep learning.
 
----
+To Anyone Just Starting Out
+It’s okay to not know anything when you begin.
+What matters is showing up. Asking questions. Trying again.
 
-## Why This Matters
+Your flasks might be quiet, but the growth happening in you is *loud*.
+And one day, you’ll realise: you didn’t just finish a project.
+You built a whole new version of yourself in the process.
 
-**Early detection = earlier intervention**
-
-While there’s no cure yet, recognizing the prodromal phase can help:
-
-* **Delay progression** with lifestyle changes, exercise, and early medications
-* **Open the door** to clinical trials and experimental therapies
-* **Give people answers** and reduce years of misdiagnosis
-
-> *Imagine a future where we don’t wait for tremors to start treatment —
-> We act before the brain loses too much dopamine.*
-
-That future starts with **awareness**.
-
-<Figure style="text-align: center;">
-<img src="../assets/d.png" alt="Me" width="300" />
-<figcaption>  Spot it early. Treat it better. Parksinson's doesn't wait and neither should we.</figcaption>
-</figure>
-
----
-
-##  What Researchers Are Exploring
-
-Scientists are developing tools to catch Parkinson’s early:
-
-* [Olfactory tests](https://www.nature.com/articles/s41531-017-0039-8) (smell tests for diagnostic screening)
-* [Sleep studies](https://pmc.ncbi.nlm.nih.gov/articles/PMC8193212/) to track REM behaviour disorder
-* [Biomarkers](https://pmc.ncbi.nlm.nih.gov/articles/PMC7407121/) in cerebrospinal fluid and blood
-* Imaging techniques like [DaTscan](https://www.apdaparkinson.org/article/what-is-a-datscan-and-should-i-get-one/) to track dopamine transport
-
-One day, a combination of these might become a **standard Parkinson’s risk panel**, just like blood pressure or cholesterol checks.
-
----
-
-##  Final Thoughts
-
-Parkinson’s isn’t just about tremors. It’s a disease that starts silently and grows over time.
-
-The more we talk about these early signs, the more people we can help identify the disease before it takes over.
-
-So let’s **talk about smell loss**.
-Let’s **talk about sleep disturbances**.
-Let’s **talk about depression**.
-
-> *Because what we ignore today might be what saves someone tomorrow.*
-
-**— Krithika Rajesh 🧠**
+— *Krithika Rajesh* 🧠
