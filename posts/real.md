@@ -46,6 +46,11 @@ There were moments of panic.
 And frustration.
 And that one week where everything seemed to go wrong back-to-back.
 
+ <Figure style="text-align: center;">
+<img src="../assets/3.jpg" alt="Me" width="300" />
+<figcaption>The place that saw the panic, pep talks and all the existential crisis. Oh and meet Señor Pipette - my emotional support instrument</figcaption>
+</figure>
+
 But somewhere between the failures and mini-victories, I became more resilient.
 I learned how to be patient when things took longer than expected.
 How to stay calm when something didn’t work.
