@@ -12,7 +12,7 @@
   <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- Main site JS -->
+  <!-- Main JS -->
   <script defer src="../assets/script.js"></script>
 </head>
 
@@ -38,26 +38,24 @@
   </header>
 
   <main>
-    <!-- Markdown content will be injected here -->
     <div id="markdown-container">Loading post...</div>
 
-    <!-- ❤️ Like button -->
+    <!-- ❤️ Like Button -->
     <div class="like-section" style="text-align:center; margin-top:2em;">
-      <button id="like-btn" style="padding:0.5em 1em;">❤️ Like</button>
-      <p><span id="like-count">0</span> Likes</p>
+      <button id="like-btn" style="padding:0.5em 1em;">❤️ Like</button>
+      <p><span id="like-count">0</span> Likes</p>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
 
-  <!-- Firebase Like‑button logic -->
+  <!-- Firebase like logic -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
     import { getFirestore, doc, getDoc, setDoc, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-    /* 🔗  Firebase config  */
     const firebaseConfig = {
       apiKey: "AIzaSyC785KpFVMy9r3LMQ-66-nMSDMqhYIGuxk",
       authDomain: "bench-to-brain.firebaseapp.com",
@@ -67,19 +65,19 @@
       appId: "1:637947380353:web:fdf12b58ee75d4978f4380",
       measurementId: "G-16TDLGD1ZG"
     };
+
     const app = initializeApp(firebaseConfig);
     const db  = getFirestore(app);
 
-    /* ❤️ Like‑toggle logic */
     window.addEventListener("DOMContentLoaded", async () => {
-      const btn   = document.getElementById("like-btn");
-      const span  = document.getElementById("like-count");
-      const file  = new URLSearchParams(location.search).get("post");
+      const btn  = document.getElementById("like-btn");
+      const span = document.getElementById("like-count");
+      const file = new URLSearchParams(location.search).get("post");
       if (!btn || !file) return;
 
-      const key        = `b2b-like-${file}`;
-      const docRef     = doc(db, "likes", file);
-      const snap       = await getDoc(docRef);
+      const key = `b2b-like-${file}`;
+      const docRef = doc(db, "likes", file);
+      const snap = await getDoc(docRef);
 
       if (snap.exists()) span.textContent = snap.data().count ?? 0;
       else { await setDoc(docRef, { count: 0 }); span.textContent = 0; }
@@ -96,7 +94,7 @@
       });
 
       function updateLabel() {
-        btn.textContent = liked ? "💔 Unlike" : "❤️ Like";
+        btn.textContent = liked ? "💔 Unlike" : "❤️ Like";
       }
     });
   </script>
