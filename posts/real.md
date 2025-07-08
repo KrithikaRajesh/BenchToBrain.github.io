@@ -81,4 +81,4 @@ Your flasks might be quiet, but the growth happening in you is *loud*.
 And one day, you’ll realise: you didn’t just finish a project.
 You built a whole new version of yourself in the process.
 
-— *Krithika Rajesh* 🧠
+— **Krithika Rajesh** 🧠
