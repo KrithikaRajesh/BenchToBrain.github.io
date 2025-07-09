@@ -235,3 +235,9 @@ form button {
 #mc_embed_signup .clear {
   text-align: center;
 }
+.post-date {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 0.25em 0 0.4em;
+}
