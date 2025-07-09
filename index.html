@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bench to Brain</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet" />
 
-  <!-- Scripts -->
+  <!-- Site‑wide JS (hamburger) -->
   <script defer src="assets/script.js"></script>
 </head>
 <body>
@@ -35,76 +35,70 @@
 
   <main>
     <h2>Recent Posts</h2>
-    <div class="posts" id="posts-container">
-      <!-- Posts will be injected here -->
-    </div>
+    <div class="posts" id="posts-container"><!-- JS fills this --></div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
 
   <script>
+    /* ----------  Post data  ---------- */
     const posts = [
-       {
+      {
         title: "What’s Going On In The Brain During Parkinson’s?",
-        date: "2025-07-09",
-        file: "next.md",
+        date:  "2025-07-09",
+        file:  "posts/next.md",
         description: "Understanding the storm in the brain"
       },
-        {
+      {
         title: "Things I Didn’t Expect to Learn From My Master’s Project",
-        date: "2025-07-06",
-        file: "real.md",
+        date:  "2025-07-06",
+        file:  "posts/real.md",
         description: "From Clueless Cultures to Confidence (Kind Of)"
       },
       {
         title: "The Earliest Signs of Parkinson’s (That No One Talks About)",
-        date: "2025-07-02",
-        file: "2025-07-02-signs.md",
+        date:  "2025-07-02",
+        file:  "posts/2025-07-02-signs.md",
         description: "Parkinson's whispers before it shouts."
       },
       {
         title: "Welcome to Bench to Brain",
-        date: "2025-07-01",
-        file: "2025-07-01-post-title.md",
+        date:  "2025-07-01",
+        file:  "posts/2025-07-01-post-title.md",
         description: "A brief introduction to the blog, its purpose, and the journey ahead."
       }
     ];
 
+    /* ----------  Helper: prettify date ---------- */
+    function prettyDate(iso) {
+      const d     = new Date(iso);
+      const day   = d.getDate();
+      const ord   = ["th", "st", "nd", "rd"][
+        (day % 10 > 3 || (day % 100 >= 11 && day % 100 <= 13)) ? 0 : day % 10
+      ];
+      const month = d.toLocaleString("en-GB", { month: "long" });
+      const year  = d.getFullYear();
+      const week  = d.toLocaleString("en-GB", { weekday: "long" });
+      return `${day}${ord} ${month} ${year} – ${week}`;
+    }
+
+    /* ----------  Build post cards ---------- */
     const container = document.getElementById("posts-container");
-
-    // Sort by date (newest first)
-    posts.sort((a, b) => b.date.localeCompare(a.date));
-
-  // 👉 helper to turn "2025-07-09" into "9th July 2025 – Wednesday"
-function prettyDate(iso) {
-  const d = new Date(iso);
-
-  // day with ordinal suffix
-  const day   = d.getDate();
-  const ord   = ["th","st","nd","rd"][(day % 10 > 3 || (day % 100 >= 11 && day % 100 <= 13)) ? 0 : day % 10];
-  const month = d.toLocaleString("en-GB", { month: "long" });     // July
-  const year  = d.getFullYear();                                  // 2025
-  const week  = d.toLocaleString("en-GB", { weekday: "long" });   // Wednesday
-
-  return `${day}${ord} ${month} ${year} – ${week}`;
-}
-
-posts.forEach(post => {
-  const postHTML = `
-    <div class="post-card">
-      <a href="posts/view.html?post=${encodeURIComponent(post.file)}" class="blog-post-card">
-        <h3>${post.title}</h3>
-        <p class="post-date">${prettyDate(post.date)}</p>
-        <p>${post.description}</p>
-      </a>
-    </div>
-  `;
-  container.innerHTML += postHTML;
-});
-  container.innerHTML += postHTML;
-});
+    posts
+      .sort((a, b) => b.date.localeCompare(a.date))           // newest first
+      .forEach(post => {
+        container.innerHTML += `
+          <div class="post-card">
+            <a href="posts/view.html?post=${encodeURIComponent(post.file)}" class="blog-post-card">
+              <h3>${post.title}</h3>
+              <p class="post-date">${prettyDate(post.date)}</p>
+              <p>${post.description}</p>
+            </a>
+          </div>
+        `;
+      });
   </script>
 </body>
 </html>
