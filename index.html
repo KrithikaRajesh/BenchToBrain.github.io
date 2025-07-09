@@ -77,17 +77,18 @@
     // Sort by date (newest first)
     posts.sort((a, b) => b.date.localeCompare(a.date));
 
-    posts.forEach(post => {
-      const postHTML = `
-        <div class="post-card">
-          <a href="posts/view.html?post=${post.file}" class="blog-post-card">
-            <h3>${post.title}</h3>
-            <p>${post.description}</p>
-          </a>
-        </div>
-      `;
-      container.innerHTML += postHTML;
-    });
+   posts.forEach(post => {
+  const postHTML = `
+    <div class="post-card">
+      <a href="posts/view.html?post=${post.file}" class="blog-post-card">
+        <h3>${post.title}</h3>
+        <p class="post-date">${new Date(post.date).toDateString()}</p>
+        <p>${post.description}</p>
+      </a>
+    </div>
+  `;
+  container.innerHTML += postHTML;
+});
   </script>
 </body>
 </html>
