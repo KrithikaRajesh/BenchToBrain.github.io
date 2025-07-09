@@ -19,6 +19,7 @@ In Parkinson’s, dopamine starts to disappear — specifically in a tiny region
 
 ## What Exactly Happens?
 **1. Neuron Death in the Substantia Nigra**
+
 This area is responsible for producing dopamine.
 In Parkinson’s, the neurons here start to die off slowly, progressively, and for reasons we still don’t fully understand.
 By the time symptoms show up, around [60–80% of these neurons may already be gone.](https://pmc.ncbi.nlm.nih.gov/articles/PMC2918373/#R26)
@@ -34,10 +35,12 @@ As these neurons die, they leave behind pigment called **neuromelanin**, kind of
 </figure>
 
 **2. The Dopamine Deficit**
+
 With fewer dopamine-producing cells, the brain’s motor control system starts to struggle. Movements become slower, less coordinated, and harder to initiate.
 Imagine trying to drive a car with no oil in the engine. The car *technically* still moves… but it’s not pretty.
 
 **3. Lewy Bodies — The Misfolded Troublemakers**
+
 Inside those dying neurons, you’ll often find clumps of a protein called alpha-synuclein. These clumps are called Lewy bodies, and they’re a key [hallmark of Parkinson’s pathology.](https://febs.onlinelibrary.wiley.com/doi/pdf/10.1111/febs.12335)
 They’re basically protein globs that should’ve been broken down or cleared away, but instead… they pile up, interfere with normal function, and might even spread to nearby cells like a bad rumour.
 
@@ -62,6 +65,7 @@ Though the substantia nigra is the main target early on, Parkinson’s eventuall
 That’s why people experience things like depression, constipation, fatigue, or cognitive decline — sometimes even before motor symptoms start.
 
 ## But… Why Does This Happen?
+
 Short answer? We’re still figuring it out.
 But research suggests it’s a mix of:
 * **Genetic mutations** (like in the SNCA, LRRK2, PARK genes)
