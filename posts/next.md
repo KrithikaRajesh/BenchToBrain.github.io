@@ -27,7 +27,7 @@ As these neurons die, they leave behind pigment called **neuromelanin**, kind of
  <Figure style="text-align: center;">
 <img src="../assets/02.jpg" alt="Me" width="300" />
 <figcaption>
-<a href="[https://doi.org/10.1016/j.neuron.2023.05.007](https://scienceofparkinsons.com/2019/03/12/neuromelanin/)" target="_blank">
+<a href="https://scienceofparkinsons.com/2019/03/12/neuromelanin/" target="_blank">
       As dopamine-producing neurons die, the region visibly fades, like a memory being erased.
     </a>
 </figcaption>
@@ -43,7 +43,7 @@ They’re basically protein globs that should’ve been broken down or cleared a
 
  <Figure style="text-align: center;">
 <img src="../assets/03.jpg" alt="Me" width="400" />
-<figcaption> Lewy bodies: Beautiful… but deadly(https://scienceofparkinsons.com/2018/10/20/lewy/)
+<figcaption>
 <a href="https://scienceofparkinsons.com/2018/10/20/lewy/" target="_blank">
      Lewy bodies: Beautiful… but deadly
     </a>
