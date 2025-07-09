@@ -13,7 +13,7 @@ Dopamine is a chemical messenger in the brain that helps control movement, mood,
 In Parkinson’s, dopamine starts to disappear — specifically in a tiny region called the substantia nigra, deep within the midbrain.
 
 <Figure style="text-align: center;">
-<img src="../assets/01.png" alt="Me" width="300" />
+<img src="../assets/01.png" alt="Me" width="500" />
 <figcaption> Spotlight on the Substantia Nigra 🔦</figcaption>
 </figure>
 
