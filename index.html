@@ -77,16 +77,32 @@
     // Sort by date (newest first)
     posts.sort((a, b) => b.date.localeCompare(a.date));
 
-   posts.forEach(post => {
+  // 👉 helper to turn "2025-07-09" into "9th July 2025 – Wednesday"
+function prettyDate(iso) {
+  const d = new Date(iso);
+
+  // day with ordinal suffix
+  const day   = d.getDate();
+  const ord   = ["th","st","nd","rd"][(day % 10 > 3 || (day % 100 >= 11 && day % 100 <= 13)) ? 0 : day % 10];
+  const month = d.toLocaleString("en-GB", { month: "long" });     // July
+  const year  = d.getFullYear();                                  // 2025
+  const week  = d.toLocaleString("en-GB", { weekday: "long" });   // Wednesday
+
+  return `${day}${ord} ${month} ${year} – ${week}`;
+}
+
+posts.forEach(post => {
   const postHTML = `
     <div class="post-card">
-      <a href="posts/view.html?post=${post.file}" class="blog-post-card">
+      <a href="posts/view.html?post=${encodeURIComponent(post.file)}" class="blog-post-card">
         <h3>${post.title}</h3>
-        <p class="post-date">${new Date(post.date).toDateString()}</p>
+        <p class="post-date">${prettyDate(post.date)}</p>
         <p>${post.description}</p>
       </a>
     </div>
   `;
+  container.innerHTML += postHTML;
+});
   container.innerHTML += postHTML;
 });
   </script>
