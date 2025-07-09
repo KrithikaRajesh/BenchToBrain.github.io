@@ -1,78 +1,75 @@
  
-# Things I Didn’t Expect to Learn From My Master’s Project
-Date: 2025-07-06
-## *From Clueless Cultures to Confidence (Kind Of)*
+# What’s Going On In The Brain During Parkinson’s?
+Date: 2025-07-09
+## *Understanding the storm in the brain*
 ---
 
-We’ve already discussed what happens physically to someone with Parkinson’s. But underneath all that? There's a storm happening in the brain.
+We’ve already discussed what happens physically to someone with Parkinson’s. But *underneath all that*? There's a storm happening in the brain.
 Let’s zoom in, shall we? 
 
-The Star of the Show: Dopamine
+## The Star of the Show: Dopamine
+
 Dopamine is a chemical messenger in the brain that helps control movement, mood, and even motivation. Think of it as your brain’s “smooth operator.”
 In Parkinson’s, dopamine starts to disappear — specifically in a tiny region called the substantia nigra, deep within the midbrain.
 
 <Figure style="text-align: center;">
-<img src="../assets/1.png" alt="Me" width="300" />
-<figcaption> Me, my cells and absolutely no clue what I'm doing</figcaption>
+<img src="../assets/01.png" alt="Me" width="300" />
+<figcaption> Spotlight on the Substantia Nigra 🔦</figcaption>
 </figure>
 
-But slowly, I began to get it.
-I learned how to handle flasks confidently, how to tell if my media looked off, and how to trust what I was seeing under the microscope.
-Each passage taught me something new — not just about the cells but about myself.
-
-## It Wasn’t Just Science — It Was Adaptation
-At first, every task felt like a test.
-But over time, I began to anticipate what came next — how to plan media changes, manage time in the culture room, organize experiments, and troubleshoot on the fly.
-
-The rigid SOPs turned into flexible workflows.
-The girl who didn’t like staying a minute overtime was staying back hours — not because she had to, but because she *wanted* to.
+## What Exactly Happens?
+**1. Neuron Death in the Substantia Nigra**
+This area is responsible for producing dopamine.
+In Parkinson’s, the neurons here start to die off slowly, progressively, and for reasons we still don’t fully understand.
+By the time symptoms show up, around [60–80% of these neurons may already be gone.](https://pmc.ncbi.nlm.nih.gov/articles/PMC2918373/#R26)
+As these neurons die, they leave behind pigment called **neuromelanin**, kind of like soot after a fire. It's a byproduct of dopamine metabolism and gives the substantia nigra its dark colour. In Parkinson’s, this dark region fades as neurons vanish.
 
  <Figure style="text-align: center;">
-<img src="../assets/2.jpg" alt="Me" width="300" />
-<figcaption> 7:20pm. Everyone left. I stayed. Voluntarily. Who am I? </figcaption>
+<img src="../assets/02.jpg" alt="Me" width="300" />
+<figcaption>[As dopamine-producing neurons die, the region visibly fades, like a memory being erased.](https://scienceofparkinsons.com/2019/03/12/neuromelanin/) </figcaption>
 </figure>
 
-And I realized that research isn’t about memorizing steps — it’s about adapting when the steps don’t go as planned.
+**2. The Dopamine Deficit**
+With fewer dopamine-producing cells, the brain’s motor control system starts to struggle. Movements become slower, less coordinated, and harder to initiate.
+Imagine trying to drive a car with no oil in the engine. The car *technically* still moves… but it’s not pretty.
 
-## The Emotional Learning Curve
-There were moments of panic.
-And frustration.
-And that one week where everything seemed to go wrong back-to-back.
+**3. Lewy Bodies — The Misfolded Troublemakers**
+Inside those dying neurons, you’ll often find clumps of a protein called alpha-synuclein. These clumps are called Lewy bodies, and they’re a key [hallmark of Parkinson’s pathology.](https://febs.onlinelibrary.wiley.com/doi/pdf/10.1111/febs.12335)
+They’re basically protein globs that should’ve been broken down or cleared away, but instead… they pile up, interfere with normal function, and might even spread to nearby cells like a bad rumour.
 
  <Figure style="text-align: center;">
-<img src="../assets/3.png" alt="Me" width="400" />
-<figcaption>The place that saw the panic, pep talks and all the existential crisis. Oh and meet Señor Pipette - my emotional support instrument</figcaption>
+<img src="../assets/03.jpg" alt="Me" width="400" />
+<figcaption> [Lewy bodies: Beautiful… but deadly](https://scienceofparkinsons.com/2018/10/20/lewy/) </figcaption>
 </figure>
 
-But somewhere between the failures and mini-victories, I became more resilient.
-I learned how to be patient when things took longer than expected.
-How to stay calm when something didn’t work.
-How to be okay with not knowing everything right away.
+Some researchers believe Parkinson’s might start in the gut or nose, then spread to the brain via misfolded alpha-synuclein, a theory called [**Braak’s hypothesis**](https://pmc.ncbi.nlm.nih.gov/articles/PMC5304413/). Yep, your gut might be whispering secrets to your brain.
 
-And that mindset shift?
-Probably the biggest win of all.
+**4. It’s Not Just About Movement**
+   
+Though the substantia nigra is the main target early on, Parkinson’s eventually affects [other brain regions too](https://www.parkinsons.org.uk/research/research-blog/research-explained/what-areas-brain-are-affected-parkinsons), like the ones responsible for:
+* Memory 
+* Mood 
+* Autonomic functions (like blood pressure, digestion, etc.)
+  
+That’s why people experience things like depression, constipation, fatigue, or cognitive decline — sometimes even before motor symptoms start.
 
-## Looking Back Now
-This project didn’t just teach me about senescence markers or antioxidant effects.
-It taught me:
+## But… Why Does This Happen?
+Short answer? We’re still figuring it out.
+But research suggests it’s a mix of:
+* **Genetic mutations** (like in the SNCA, LRRK2, PARK genes)
+* **Environmental toxins** (pesticides, heavy metals)
+* **Mitochondria**, the cell’s powerhouses, don’t work right, leading to energy shortages in neurons.
+* **Oxidative stress** (a.k.a. free radical damage) builds up over time, damaging DNA and proteins. It’s like rusting from the inside.
+* And… pure chaos. Science-style.
 
-How to work with living systems that don’t always behave as expected.
+ <Figure style="text-align: center;">
+<img src="../assets/04.jpg" alt="Me" width="400" />
+<figcaption>It’s complicated. Multifactorial. And still unfolding. Which is exactly why we study it.</figcaption>
+</figure>
 
-How to think critically when things don’t go as planned.
-
-How to stay grounded, even when my experiments weren’t.
-
-It made me curious.
-Confident.
-And most of all, it made me excited to keep learning.
-
-To Anyone Just Starting Out
-It’s okay to not know anything when you begin.
-What matters is showing up. Asking questions. Trying again.
-
-Your flasks might be quiet, but the growth happening in you is *loud*.
-And one day, you’ll realise: you didn’t just finish a project.
-You built a whole new version of yourself in the process.
+## Final Thoughts
+Parkinson’s isn’t just about shaky hands. It’s about what happens deep inside the brain — in silent regions that control everything from mood to muscle memory.
+By understanding the biology behind the symptoms, we get one step closer to better treatments, earlier diagnosis, and someday… a cure.
 
 — **Krithika Rajesh** 🧠
 
