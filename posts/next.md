@@ -79,8 +79,9 @@ But research suggests it’s a mix of:
 <figcaption>It’s complicated. Multifactorial. And still unfolding. Which is exactly why we study it.</figcaption>
 </figure>
 
-## Final Thoughts
+## 💬Final Thoughts
 Parkinson’s isn’t just about shaky hands. It’s about what happens deep inside the brain — in silent regions that control everything from mood to muscle memory.
+
 By understanding the biology behind the symptoms, we get one step closer to better treatments, earlier diagnosis, and someday… a cure.
 
 — **Krithika Rajesh** 🧠
