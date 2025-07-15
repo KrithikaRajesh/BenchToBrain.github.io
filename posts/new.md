@@ -89,4 +89,4 @@ We’re entering an era where the **gut may become the key to diagnosing and eve
   
 And honestly? That’s kind of amazing.
 
-- **Krithika Rajesh 🧠**
+-**Krithika Rajesh 🧠**
