@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bench to Brain – Post</title>
+  <title>Bench to Brain – Post</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="../assets/style.css" />
@@ -12,8 +12,58 @@
   <!-- Markdown parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-  <!-- Site‑wide JS (loads the markdown + hamburger) -->
-  <script defer src="../assets/script.js"></script>
+  <!-- Markdown loading script -->
+  <script defer>
+    window.addEventListener("DOMContentLoaded", async () => {
+      const container = document.getElementById("markdown-container");
+      const postFile = new URLSearchParams(location.search).get("post");
+
+      if (!postFile) {
+        container.innerHTML = "<p>⚠️ Post not found.</p>";
+        return;
+      }
+
+      try {
+        const res = await fetch(postFile);
+        if (!res.ok) throw new Error("404");
+
+        const markdown = await res.text();
+        container.innerHTML = marked.parse(markdown);
+      } catch (err) {
+        container.innerHTML = "<p>⚠️ Unable to load the post.</p>";
+      }
+    });
+  </script>
+
+  <!-- Like button script -->
+  <script defer>
+    window.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById('like-btn');
+      const countDisplay = document.getElementById('like-count');
+
+      const postFile = new URLSearchParams(location.search).get("post");
+      if (!postFile || !btn || !countDisplay) return;
+
+      const likeKey = `b2b-like-${postFile}`;
+      const likedKey = `b2b-liked-${postFile}`;
+
+      let count = parseInt(localStorage.getItem(likeKey)) || 0;
+      let liked = localStorage.getItem(likedKey) === 'yes';
+
+      countDisplay.textContent = count;
+      btn.textContent = liked ? '💔 Unlike' : '❤️ Like';
+
+      btn.addEventListener('click', () => {
+        liked = !liked;
+        localStorage.setItem(likedKey, liked ? 'yes' : 'no');
+        count += liked ? 1 : -1;
+        localStorage.setItem(likeKey, count);
+
+        countDisplay.textContent = count;
+        btn.textContent = liked ? '💔 Unlike' : '❤️ Like';
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -38,50 +88,18 @@
   </header>
 
   <main>
-    <!-- Markdown post will be injected here by script.js -->
+    <!-- Markdown post will be injected here -->
     <div id="markdown-container">Loading post...</div>
-  <div id="markdown-container">Loading post...</div>
 
-  <!-- ❤️ Like Button -->
-  <div class="like-box" style="text-align:center; margin-top:2em;">
-    <button id="like-btn">❤️ Like</button>
-    <p><span id="like-count">0</span> Likes</p>
-  </div>
+    <!-- ❤️ Like Button -->
+    <div class="like-box" style="text-align:center; margin-top:2em;">
+      <button id="like-btn">❤️ Like</button>
+      <p><span id="like-count">0</span> Likes</p>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
   </footer>
-  <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById('like-btn');
-    const countDisplay = document.getElementById('like-count');
-
-    // Get the filename of the current post from the URL
-    const postFile = new URLSearchParams(location.search).get("post");
-    if (!postFile) return;
-
-    // Create unique keys using the post file name
-    const likeKey = `b2b-like-${postFile}`;
-    const likedKey = `b2b-liked-${postFile}`;
-
-    // Load saved like count and liked status
-    let count = parseInt(localStorage.getItem(likeKey)) || 0;
-    let liked = localStorage.getItem(likedKey) === 'yes';
-
-    countDisplay.textContent = count;
-    btn.textContent = liked ? '💔 Unlike' : '❤️ Like';
-
-    btn.addEventListener('click', () => {
-      liked = !liked;
-      localStorage.setItem(likedKey, liked ? 'yes' : 'no');
-      count += liked ? 1 : -1;
-      localStorage.setItem(likeKey, count);
-
-      countDisplay.textContent = count;
-      btn.textContent = liked ? '💔 Unlike' : '❤️ Like';
-    });
-  });
-</script>
 </body>
 </html>
