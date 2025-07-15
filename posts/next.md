@@ -28,7 +28,7 @@ By the time symptoms show up, around [60–80% of these neurons may already be g
 As these neurons die, they leave behind pigment called **neuromelanin**, kind of like soot after a fire. It's a byproduct of dopamine metabolism and gives the substantia nigra its dark colour. In Parkinson’s, this dark region fades as neurons vanish.
 
  <Figure style="text-align: center;">
-<img src="../assets/02.jpg" alt="Me" width="300" />
+<img src="../assets/03.jpg" alt="Me" width="300" />
 <figcaption>
 <a href="https://scienceofparkinsons.com/2019/03/12/neuromelanin/" target="_blank">
       As dopamine-producing neurons die, the region visibly fades, like a memory being erased.
@@ -49,7 +49,7 @@ Inside those dying neurons, you’ll often find clumps of a protein called alpha
 They’re basically protein globs that should’ve been broken down or cleared away, but instead… they pile up, interfere with normal function, and might even spread to nearby cells like a bad rumour.
 
  <Figure style="text-align: center;">
-<img src="../assets/03.jpg" alt="Me" width="400" />
+<img src="../assets/02.jpg" alt="Me" width="400" />
 <figcaption>
 <a href="https://scienceofparkinsons.com/2018/10/20/lewy/" target="_blank">
      Lewy bodies: Beautiful… but deadly
