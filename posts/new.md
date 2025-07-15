@@ -7,7 +7,7 @@ Date: 2025-07-15
 
 When we think about Parkinson’s disease, we usually zoom in on the brain: dopamine, tremors, and that wobbly, uncooperative walk. But a growing body of research says:
 
-      Parkinson’s might actually start in your gut! 
+Parkinson’s might actually start in your gut! 
       
 Yes. The same place you digest your fries and question your dairy tolerance might be the earliest battleground in this brain disease.
 
