@@ -42,16 +42,15 @@ Now here’s where things get crazy:
 * Researchers have found **misfolded alpha-synuclein in the gut** of Parkinson’s patients *years* before it's detected in the brain.
 * These misfolded proteins may **travel up the vagus nerve** from the gut to the brain, spreading their chaos.
 
+ <Figure style="text-align: center;">
+<img src="../assets/Dos.jpg" alt="Me" width="300" />
+<figcaption>
+<a href="https://neurotorium.org/the-microbiome-gut-brain-axis-in-parkinsons-disease/" target="_blank">
+    Alpha-synuclein might travel from the gut to the brain—linking gut health to Parkinson’s.
+    </a>
+</figcaption>
+</figure>
 
-
-
-
-
-
-
-
-
-Caption: Alpha-synuclein might travel from the gut to the brain—linking gut health to Parkinson’s.
 This process is called **prion-like propagation**, like passing bad code from one neuron to the next.
 In fact, a Danish study found that people who had undergone a **vagotomy** (surgical severing of the vagus nerve) had a significantly reduced risk of developing Parkinson’s.
 
