@@ -1,3 +1,10 @@
+ 
+# Parkinson’s and the Gut — The Weirdest, Realest Connection
+Date: 2025-07-15
+## How your gut microbes might influence brain cells, dopamine, and the onset of Parkinson’s.
+---
+
+
 When we think about Parkinson’s disease, we usually zoom in on the brain: dopamine, tremors, and that wobbly, uncooperative walk. But a growing body of research says:
 
       Parkinson’s might actually start in your gut! 
