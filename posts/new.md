@@ -75,7 +75,7 @@ Emerging [research](https://www.sciencedirect.com/science/article/abs/pii/S03064
 Scientists are starting to explore:
 
 * [**Gut biomarkers**](https://pmc.ncbi.nlm.nih.gov/articles/PMC11513973/) (like specific alpha-synuclein strains in stool or gut biopsies)
-* [**Probiotic**](https://www.sciencedirect.com/science/article/pii/S0965229924000335) **and** [**prebiotic**](https://www.nature.com/articles/s41531-025-00885-5) **therapies**]
+* [**Probiotic**](https://www.sciencedirect.com/science/article/pii/S0965229924000335) **and** [**prebiotic**](https://www.nature.com/articles/s41531-025-00885-5) **therapies**
 * [**Dietary interventions**](https://pmc.ncbi.nlm.nih.gov/articles/PMC10836553/) (Mediterranean-style diets seem protective)
 * [**Anti-inflammatory compounds**](https://www.sciencedirect.com/science/article/pii/S1568163722000605) targeting the enteric nervous system
 * [**Faecal microbiota transplantation**](https://pmc.ncbi.nlm.nih.gov/articles/PMC10019775/) (yes, poop transplants—real science!)
