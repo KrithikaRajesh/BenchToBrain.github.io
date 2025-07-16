@@ -73,9 +73,11 @@ nav ul.menu a {
     justify-content: center;
     flex-direction: row;
   }
+
   nav ul.menu li {
     margin: 0 15px;
   }
+
   .menu-toggle {
     display: none;
   }
@@ -86,19 +88,46 @@ nav ul.menu a {
   display: flex;
 }
 
-/* Main content */
+/* Main content layout */
 main {
   padding: 2em;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
 }
 
+/* Grid layout for posts */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual blog card */
 .post-card {
   background: #fff;
-  padding: 1em;
-  margin: 1em 0;
+  border-radius: 8px;
   border-left: 5px solid #7a625a;
+  padding: 1.5em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Post date style */
+.post-date {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 0.25em 0 0.75em;
 }
 
 /* Footer */
@@ -138,6 +167,7 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+
   .about-image {
     text-align: center;
     margin-top: 1.5em;
@@ -163,7 +193,7 @@ figcaption {
   text-align: center;
 }
 
-/* Blog post font */
+/* Blog post content font */
 #blog-content {
   font-family: "Playfair Display", serif !important;
   font-size: 1.05em;
@@ -171,7 +201,7 @@ figcaption {
   color: #333;
 }
 
-/* Responsive images */
+/* Responsive images in blog */
 .smart-img {
   width: 45%;
   height: auto;
@@ -210,7 +240,8 @@ form button {
   border: none;
   cursor: pointer;
 }
-/* Mailchimp override styles to match site */
+
+/* Mailchimp overrides */
 #mc_embed_signup label {
   display: block;
   margin-bottom: 5px;
@@ -234,10 +265,4 @@ form button {
 
 #mc_embed_signup .clear {
   text-align: center;
-}
-.post-date {
-  color: #666;
-  font-size: 0.9em;
-  font-style: italic;
-  margin: 0.25em 0 0.4em;
 }
