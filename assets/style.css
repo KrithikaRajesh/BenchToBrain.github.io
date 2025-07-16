@@ -266,3 +266,25 @@ form button {
 #mc_embed_signup .clear {
   text-align: center;
 }
+.posts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  justify-content: space-between;
+}
+
+.post-card {
+  background: #fff;
+  padding: 1em;
+  border-left: 5px solid #7a625a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 48%;
+  box-sizing: border-box;
+}
+
+/* For small screens: one card per row */
+@media (max-width: 768px) {
+  .post-card {
+    width: 100%;
+  }
+}
