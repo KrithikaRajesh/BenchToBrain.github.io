@@ -275,3 +275,36 @@ form button {
 #mc_embed_signup .clear {
   text-align: center;
 }
+/* Grid layout for blog posts */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.post-card {
+  background: #fff;
+  padding: 1.5em;
+  border-left: 5px solid #7a625a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.post-date {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 0.25em 0 0.75em;
+}
