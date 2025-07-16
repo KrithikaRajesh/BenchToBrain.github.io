@@ -264,3 +264,52 @@ form button {
 #mc_embed_signup .clear {
   text-align: center;
 }
+.hero-header {
+  background: url('assets/banner.jpg') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* optional dark overlay */
+}
+
+.main-nav {
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.main-nav ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+
+.main-nav ul.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+  .main-nav ul.menu {
+    flex-direction: column;
+    gap: 1em;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1em;
+  }
+}
