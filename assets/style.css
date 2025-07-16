@@ -265,7 +265,7 @@ form button {
   text-align: center;
 }
 .hero-header {
-  background: url('assets/banner.jpg') no-repeat center center;
+  background: url('assets/banner.png') no-repeat center center;
   background-size: cover;
   height: 300px;
   position: relative;
