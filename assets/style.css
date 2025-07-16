@@ -95,20 +95,23 @@ main {
   margin: auto;
 }
 
-/* Grid layout for posts */
+/* Post container – two per row */
 .posts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
 }
 
-/* Individual blog card */
+/* Blog cards */
 .post-card {
   background: #fff;
-  border-radius: 8px;
   border-left: 5px solid #7a625a;
-  padding: 1.5em;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 1.5em;
+  width: 48%;
+  box-sizing: border-box;
   transition: box-shadow 0.3s ease;
 }
 
@@ -122,12 +125,18 @@ main {
   display: block;
 }
 
-/* Post date style */
 .post-date {
   color: #666;
   font-size: 0.9em;
   font-style: italic;
   margin: 0.25em 0 0.75em;
+}
+
+/* For small screens: one card per row */
+@media (max-width: 768px) {
+  .post-card {
+    width: 100%;
+  }
 }
 
 /* Footer */
@@ -265,26 +274,4 @@ form button {
 
 #mc_embed_signup .clear {
   text-align: center;
-}
-.posts-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  justify-content: space-between;
-}
-
-.post-card {
-  background: #fff;
-  padding: 1em;
-  border-left: 5px solid #7a625a;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  width: 48%;
-  box-sizing: border-box;
-}
-
-/* For small screens: one card per row */
-@media (max-width: 768px) {
-  .post-card {
-    width: 100%;
-  }
 }
