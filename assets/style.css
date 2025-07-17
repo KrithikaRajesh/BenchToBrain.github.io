@@ -136,7 +136,7 @@ h2 {
 }
 
 footer {
-  background: silver;
+  background: #c0c0c0; /* Slightly darker than 'silver' */
   color: #222;
   text-align: center;
   padding: 1em;
