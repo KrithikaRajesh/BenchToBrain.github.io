@@ -13,7 +13,7 @@ h1, h2, h3 {
 
 /* Hero header with background image */
 .hero-header {
-  background: url('assets/banner.png') no-repeat center center;
+  background: url('assets/banners.png') no-repeat center center;
   background-size: cover;
   height: 320px;
   position: relative;
