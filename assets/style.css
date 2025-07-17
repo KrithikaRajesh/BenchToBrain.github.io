@@ -161,13 +161,17 @@ footer {
 
 .about-image {
   flex: 1;
-  text-align: right;
+  max-width: 45%; /* Ensures the image doesn't overflow */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .about-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
+  aspect-ratio: 3 / 4; /* Adjust this ratio to better match your image shape */
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
