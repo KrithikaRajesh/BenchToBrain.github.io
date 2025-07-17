@@ -1,4 +1,17 @@
-/* Hero header with image background */
+/* Global styles */
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  margin: 0 0 0.5em;
+}
+
+/* Hero header with background image */
 .hero-header {
   background: url('assets/banner.png') no-repeat center center;
   background-size: cover;
@@ -9,20 +22,23 @@
   justify-content: center;
 }
 
-/* Optional overlay */
 .hero-header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4); /* overlay */
   z-index: 0;
 }
 
-/* Navigation inside hero */
+/* Navigation */
 .main-nav {
   position: relative;
   z-index: 1;
   padding: 1em 0;
+}
+
+.menu-toggle {
+  display: none;
 }
 
 .main-nav ul.menu {
@@ -47,12 +63,211 @@
   color: #ffd;
 }
 
+/* Responsive nav */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8em;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    margin-bottom: 1em;
+  }
+
   .main-nav ul.menu {
+    display: none;
     flex-direction: column;
-    gap: 0.8em;
+    gap: 1em;
     background: rgba(0, 0, 0, 0.5);
     padding: 1em;
     border-radius: 8px;
   }
+
+  .main-nav ul.menu.active {
+    display: flex;
+  }
+}
+
+/* Main layout */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em;
+}
+
+h2 {
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Blog post grid */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2em;
+}
+
+.post-card {
+  background: #fff;
+  border-left: 5px solid #7a625a;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 1.5em;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.post-date {
+  color: #666;
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 0.25em 0 0.75em;
+}
+
+/* Footer */
+footer {
+  background: #7a625a;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.95em;
+}
+
+/* About page */
+.about-container {
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  text-align: right;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    text-align: center;
+    margin-top: 1.5em;
+  }
+}
+
+/* Figures and captions */
+figure {
+  text-align: center;
+  margin: 20px auto;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-family: "Handlee", cursive;
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Blog content area */
+#blog-content {
+  font-family: "Playfair Display", serif !important;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Responsive images in blog */
+.smart-img {
+  width: 45%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .smart-img {
+    width: 90%;
+  }
+}
+
+/* Subscribe form */
+form {
+  background: #f9f7f5;
+  padding: 20px;
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form button {
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #6c4e3d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mailchimp */
+#mc_embed_signup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+#mc_embed_signup input[type="text"],
+#mc_embed_signup input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#mc_embed_signup .asterisk {
+  color: red;
+}
+
+#mc_embed_signup .clear {
+  text-align: center;
 }
