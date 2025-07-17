@@ -144,12 +144,13 @@ footer {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* About page */
 .about-container {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
+  justify-content: space-between;
   gap: 2em;
   padding: 2em;
+  flex-wrap: wrap;
 }
 
 .about-text {
