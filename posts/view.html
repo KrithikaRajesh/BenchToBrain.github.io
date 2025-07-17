@@ -9,11 +9,44 @@
   <link rel="stylesheet" href="../assets/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&family=Handlee&display=swap" rel="stylesheet" />
 
-  <!-- Markdown parser -->
+  <!-- Scripts -->
+  <script defer src="../assets/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
 
-  <!-- Markdown loading script -->
-  <script defer>
+<body>
+  <!-- Banner -->
+  <header class="hero-header">
+    <div class="hero-overlay"></div>
+    <nav class="main-nav">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="menu" id="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../subscribe.html">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div id="markdown-container" class="blog-content">Loading post...</div>
+
+    <!-- Like Button -->
+    <div class="like-box" style="text-align:center; margin-top:2em;">
+      <button id="like-btn">❤️ Like</button>
+      <p><span id="like-count">0</span> Likes</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
+  </footer>
+
+  <!-- Post loader -->
+  <script>
     window.addEventListener("DOMContentLoaded", async () => {
       const container = document.getElementById("markdown-container");
       const postFile = new URLSearchParams(location.search).get("post");
@@ -35,13 +68,13 @@
     });
   </script>
 
-  <!-- Like button script -->
-  <script defer>
+  <!-- Like button -->
+  <script>
     window.addEventListener("DOMContentLoaded", () => {
       const btn = document.getElementById('like-btn');
       const countDisplay = document.getElementById('like-count');
-
       const postFile = new URLSearchParams(location.search).get("post");
+
       if (!postFile || !btn || !countDisplay) return;
 
       const likeKey = `b2b-like-${postFile}`;
@@ -64,42 +97,5 @@
       });
     });
   </script>
-</head>
-
-<body>
-  <header>
-    <div class="header-inner">
-      <img src="../assets/logo.png" alt="Bench to Brain Logo" class="logo" />
-      <div class="titles">
-        <h1>Bench to Brain</h1>
-        <p class="tagline">Exploring regeneration, one neuron at a time</p>
-      </div>
-    </div>
-
-    <nav>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      <ul class="menu" id="menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-        <li><a href="../subscribe.html">Subscribe</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Markdown post will be injected here -->
-    <div id="markdown-container">Loading post...</div>
-
-    <!-- ❤️ Like Button -->
-    <div class="like-box" style="text-align:center; margin-top:2em;">
-      <button id="like-btn">❤️ Like</button>
-      <p><span id="like-count">0</span> Likes</p>
-    </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Bench to Brain – Created by Krithika Rajesh</p>
-  </footer>
 </body>
 </html>
