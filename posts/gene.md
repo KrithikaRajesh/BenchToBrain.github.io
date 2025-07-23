@@ -1,4 +1,5 @@
 # 🧬 Is It In Your Genes?
+Date: 2025-07-23
 ## What Causes Parkinson’s Disease (And What Doesn’t)
 We often think of diseases as either inherited or random. But Parkinson’s? It's a little bit of both, and a whole lot more complicated. Welcome to the curious case of Parkinson’s Disease, where genetics, environment, and just plain bad luck all seem to shake hands.
 
