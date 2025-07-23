@@ -49,10 +49,11 @@ The truth lies in a **multifactorial** model. Think of it as a seesaw:
 * One side is your *genetic risk* - the DNA you were born with.
 * The other side is your *environmental exposure* - the life you live.
 
-
-
-
-Caption – The more weight you have on either side, the more that balance tips toward disease. 
+<Figure style="text-align: center;">
+<img src="../assets/iii.jpg" alt="Me" width="500" />
+<figcaption> The more weight you have on either side, the more that balance tips toward disease. 
+ </figcaption>
+</figure>
 
 In many people, it’s not just one massive push; it’s a slow build-up over time.
 
