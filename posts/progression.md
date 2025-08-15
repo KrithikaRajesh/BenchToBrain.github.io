@@ -92,14 +92,11 @@ Fact: Many people in this stage require a caregiver for daily needs, but quality
 
 **Fact:** While this is the most advanced stage, compassionate care, tailored therapy, and strong emotional support can still bring comfort and dignity
 
-
-
-
-
-
-
-
-Caption: Visual representation of the Hoehn and Yahr scale for diagnosing Parkinson’s
+<Figure style="text-align: center;">
+<img src="../assets/Picture6.png" alt="Me" width="300" />
+<figcaption>Visual representation of the Hoehn and Yahr scale for diagnosing Parkinson’s
+</figcaption>
+</figure>
 
 ## Why Each Journey Is Different
 
@@ -113,15 +110,10 @@ The Hoehn and Yahr scale is useful, but it’s not a stopwatch. Two people can b
   
 Some progress slowly over decades; others may experience faster changes. And remember, **non-motor symptoms** like depression, constipation, and sleep disorders can appear years before or independently of motor changes.
 
-
-
-
-
-
-
-
-
-Caption: The major factors that affect the progression of Parkinson’s.
+<Figure style="text-align: center;">
+<img src="../assets/Picture7.png" alt="Me" width="300" />
+<figcaption>The major factors that affect the progression of Parkinson’s.</figcaption>
+</figure>
 
 ## 💡 Key takeaway
 Parkinson’s disease is more than its stages. It’s a deeply personal journey shaped by biology, lifestyle, and support systems. While the Hoehn and Yahr scale gives us a roadmap, every road is different, and with research, rehabilitation, and community, living well with Parkinson’s is possible at every stage.
