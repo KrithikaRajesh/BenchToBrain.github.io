@@ -2,7 +2,9 @@
 ## The 5 Stages of Parkinson’s Disease
 
 While symptoms like tremors, stiffness, or difficulty walking are part of Parkinson’s, the disease is far more complex, and its progression isn’t the same for everyone. 
+
 The [Hoehn and Yahr scale](https://www.neurology.org/doi/10.1212/WNL.17.5.427), developed in 1967, is one way doctors describe how the disease advances over time. It divides Parkinson’s into five stages, from mild to severe, but these stages are more like general guidelines than a strict timeline.
+
 This blog will break down what each stage can look like regarding **functional abilities, motor vs. non-motor symptoms**, and why no two journeys are identical.
 
 ## Stage 1: The Subtle Start
@@ -20,8 +22,13 @@ This blog will break down what each stage can look like regarding **functional a
   
 ## Non-motor symptoms:
 * Fatigue, mild anxiety, or loss of smell can appear even before motor symptoms.
+  
+ <Figure style="text-align: center;">
+<img src="../assets/Picture1.png" alt="Me" width="300" />
+<figcaption> </figcaption>
+</figure>
 
-Fact: Many people stay in this stage for years, and some don’t even realise these symptoms are related to Parkinson’s at first.
+**Fact:** Many people stay in this stage for years, and some don’t even realise these symptoms are related to Parkinson’s at first.
 
 ## Stage 2: The Noticeable Shift
 ## Functional changes:
@@ -39,8 +46,13 @@ Fact: Many people stay in this stage for years, and some don’t even realise th
 * Mild mood changes.
 * Sleep disturbances.
 * Some people start noticing constipation or urinary urgency.
+  
+   <Figure style="text-align: center;">
+<img src="../assets/Picture2.png" alt="Me" width="300" />
+<figcaption> </figcaption>
+</figure>
 
-Fact: People often adapt well here, but fatigue and frustration may become part of the routine.
+**Fact:** People often adapt well here, but fatigue and frustration may become part of the routine.
 
 ## Stage 3: The Balancing Act
 ## Functional changes:
@@ -58,9 +70,12 @@ Fact: People often adapt well here, but fatigue and frustration may become part 
 * Cognitive changes such as mild memory problems or difficulty multitasking.
 * Anxiety and depression may become more prominent.
 
+ <Figure style="text-align: center;">
+<img src="../assets/Picture3.png" alt="Me" width="300" />
+<figcaption> </figcaption>
+</figure>
 
-
-Fact: This is often when Parkinson’s becomes more visible to others. Mobility aids may start being considered.
+**Fact:** This is often when Parkinson’s becomes more visible to others. Mobility aids may start being considered.
 
 ## Stage 4: The Dependency Stage
 ## Functional changes:
@@ -74,8 +89,13 @@ Fact: This is often when Parkinson’s becomes more visible to others. Mobility 
 ## Non-motor symptoms:
 * Increased cognitive decline in some individuals.
 * Greater challenges with swallowing and speech.
+  
+ <Figure style="text-align: center;">
+<img src="../assets/Picture4.png" alt="Me" width="300" />
+<figcaption> </figcaption>
+</figure>
 
-Fact: Many people in this stage require a caregiver for daily needs, but quality of life can still be improved with the right care, physiotherapy, and adaptive tools.
+**Fact:** Many people in this stage require a caregiver for daily needs, but quality of life can still be improved with the right care, physiotherapy, and adaptive tools.
 
 ## Stage 5: The Full Support Stage
 ## Functional changes:
