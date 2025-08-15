@@ -47,10 +47,11 @@ This blog will break down what each stage can look like regarding **functional a
 * Sleep disturbances.
 * Some people start noticing constipation or urinary urgency.
   
-   <Figure style="text-align: center;">
-<img src="../assets/Picture2.png" alt="Me" width="500" />
-<figcaption> </figcaption>
+   <figure style="text-align: center;">
+  <img src="../assets/Picture2.png" alt="Me" width="500" style="display: block; margin: 0 auto;" />
+  <figcaption></figcaption>
 </figure>
+
 
 **Fact:** People often adapt well here, but fatigue and frustration may become part of the routine.
 
@@ -110,10 +111,11 @@ This blog will break down what each stage can look like regarding **functional a
 * Hallucinations, severe dementia, or profound fatigue can occur in some patients.
 * Pain and discomfort from immobility are common.
 
-  <Figure style="text-align: center;">
-<img src="../assets/Picture5.png" alt="Me" width="500" />
-<figcaption> </figcaption>
+ <figure style="text-align: center;">
+  <img src="../assets/Picture5.png" alt="Me" width="500" style="display: block; margin: 0 auto;" />
+  <figcaption></figcaption>
 </figure>
+
 
 
 **Fact:** While this is the most advanced stage, compassionate care, tailored therapy, and strong emotional support can still bring comfort and dignity
