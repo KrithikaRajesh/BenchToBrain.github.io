@@ -24,7 +24,7 @@ This blog will break down what each stage can look like regarding **functional a
 * Fatigue, mild anxiety, or loss of smell can appear even before motor symptoms.
   
  <Figure style="text-align: center;">
-<img src="../assets/Picture1.png" alt="Me" width="300" />
+<img src="../assets/Picture1.png" alt="Me" width="500" />
 <figcaption> </figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ This blog will break down what each stage can look like regarding **functional a
 * Some people start noticing constipation or urinary urgency.
   
    <Figure style="text-align: center;">
-<img src="../assets/Picture2.png" alt="Me" width="300" />
+<img src="../assets/Picture2.png" alt="Me" width="500" />
 <figcaption> </figcaption>
 </figure>
 
@@ -71,7 +71,7 @@ This blog will break down what each stage can look like regarding **functional a
 * Anxiety and depression may become more prominent.
 
  <Figure style="text-align: center;">
-<img src="../assets/Picture3.png" alt="Me" width="300" />
+<img src="../assets/Picture3.png" alt="Me" width="500" />
 <figcaption> </figcaption>
 </figure>
 
@@ -91,7 +91,7 @@ This blog will break down what each stage can look like regarding **functional a
 * Greater challenges with swallowing and speech.
   
  <Figure style="text-align: center;">
-<img src="../assets/Picture4.png" alt="Me" width="300" />
+<img src="../assets/Picture4.png" alt="Me" width="500" />
 <figcaption> </figcaption>
 </figure>
 
@@ -110,10 +110,16 @@ This blog will break down what each stage can look like regarding **functional a
 * Hallucinations, severe dementia, or profound fatigue can occur in some patients.
 * Pain and discomfort from immobility are common.
 
+  <Figure style="text-align: center;">
+<img src="../assets/Picture5.png" alt="Me" width="500" />
+<figcaption> </figcaption>
+</figure>
+
+
 **Fact:** While this is the most advanced stage, compassionate care, tailored therapy, and strong emotional support can still bring comfort and dignity
 
 <Figure style="text-align: center;">
-<img src="../assets/Picture6.png" alt="Me" width="300" />
+<img src="../assets/Picture6.png" alt="Me" width="500" />
 <figcaption>Visual representation of the Hoehn and Yahr scale for diagnosing Parkinson’s
 </figcaption>
 </figure>
@@ -131,7 +137,7 @@ The Hoehn and Yahr scale is useful, but it’s not a stopwatch. Two people can b
 Some progress slowly over decades; others may experience faster changes. And remember, **non-motor symptoms** like depression, constipation, and sleep disorders can appear years before or independently of motor changes.
 
 <Figure style="text-align: center;">
-<img src="../assets/Picture7.png" alt="Me" width="300" />
+<img src="../assets/Picture7.png" alt="Me" width="500" />
 <figcaption>The major factors that affect the progression of Parkinson’s.</figcaption>
 </figure>
 
